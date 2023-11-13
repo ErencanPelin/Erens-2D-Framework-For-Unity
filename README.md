@@ -3,13 +3,10 @@
 <u>DO NOT MODIFY ANYTHING WITHIN THE PACKAGE FOLDER</u>.
 The package was designed to only expose the code & features which should be edited. Changing anything else may cause unexpected behaviours and stop the package from working properly.
 
-For more information, please refer to the [documentation](https://erensoftworks.wordpress.com/documentation/).
-
 Basic setup documentation can be found below, refer to the following links for more detailed documentation.
  - Third party License info can be found in [Third Party Notices](Third%20Party%20Notices.md)
  - Recent changes can be viewed in the [Change Log](CHANGELOG.md).
  - For support, please contact <u>[erenp.business@gmail.com](https://erenp.business@gmail.com)</u>
- - Full documentation can be found at [www.erensoftworks/documentation](https://erensoftworks.wordpress.com/documentation/)
 <br><br>
 
 >### What's inside?
