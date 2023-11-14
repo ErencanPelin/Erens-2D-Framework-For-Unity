@@ -1,4 +1,4 @@
-# 2D Gamekit Complete Documentation READ FIRST
+# Official Eren's 2D Gamekit Documentation
 
 <u>DO NOT MODIFY ANYTHING WITHIN THE PACKAGE FOLDER</u>.
 The package was designed to only expose the code & features which should be edited. Changing anything else may cause unexpected behaviours and stop the package from working properly.
@@ -20,7 +20,7 @@ to make your development process even more streamlined.
 >- Custom toolbars & menus have been written to allow you to simply right click and add
 template objects into your scene e.g. collectables, checkpoints & enemies.
 
-## Setup
+## Installation
 ### Package Dependencies
 The following packages are required to ensure this framework works correctly.
 - `com.unity.2d.tilemap.extras`: "2.2.3"
@@ -40,7 +40,7 @@ To install:
 5. Press Add (may take a few minutes)
 <br>
 
-### Installation
+## Setup and Configuration
 
 Before you use the package, you should set a few things up to make sure everything works as intended! The steps have been documented below:
 1. Go to Edit > Project Settings > Tags & Layers
@@ -55,16 +55,21 @@ Before you use the package, you should set a few things up to make sure everythi
 9. Your settings should look like this:
     ![alt text](/Docs/physics2D.png)
 
-## Gamekit Settings
-To modify the global settings for the game kit you should go to: `Window > Eren's Gamekit > Gamekit Settings`
+### Framework Settings
+To modify the global settings for the package you should go to: `Window > Eren's Gamekit > Gamekit Settings`
 <br><br>
 Here you can modify 
 - Scene transition style
 - Scene transition color
+- Scene transition speed
 - Input system asset
 
 For a quick link to the documentation use: `Window > Eren's Gamekit > Gamekit Manual`
 <br>
-It is recommended you join the Gamekit discord server in `Window > Eren's Gamekit > Gamekit Support Server`
+It is recommended you join Eren's Official discord server in `Window > Eren's Gamekit > Gamekit Support Server`
 <br> In case you need any assistance in using the kit 
 or encounter any errors or would like to suggest improvements to the framework.
+
+## Bugs Reports and Feature Requests
+
+In the event you encounter any bugs or have an idea for a new feature, head to the Issues tab in this repository and please create a new issue. Please provide as much information as possible and this will help me to help you!
