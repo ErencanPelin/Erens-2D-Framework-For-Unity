@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <br>
 <!-- in order of newest -> oldest changes -->
 
+## [3.0.2] - 2023-11-18
+### Fixed
+- Everything that refers to old documentation links has been changed to refer to the new documentation
+- All previous mentions of the Gamekit has been renamed to Framework to fix consistency and reduce confusion of people thinking there's multiple assets
+
 ## [3.0.1] - 2023-09-24
 ### Fixed
 - Path input method for Movement component should be working correctly now
