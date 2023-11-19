@@ -1,6 +1,7 @@
 # Official Eren's 2D Gamekit Documentation
 
-<u>DO NOT MODIFY ANYTHING WITHIN THE PACKAGE FOLDER</u>.
+<ins>It is recommended you do not modify any code inside the package unless in very specific circumstances</ins>
+
 The package was designed to only expose the code & features which should be edited. Changing anything else may cause unexpected behaviours and stop the package from working properly.
 
 Basic setup documentation can be found below, refer to the following links for more detailed documentation.
