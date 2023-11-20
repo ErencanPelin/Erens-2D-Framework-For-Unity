@@ -57,7 +57,7 @@ Before you use the package, you should set a few things up to make sure everythi
     ![alt text](/Docs/physics2D.png)
 
 ### Framework Settings
-To modify the global settings for the package you should go to: `Window > Eren's Gamekit > Gamekit Settings`
+To modify the global settings for the package you should go to: `Window > Eren's 2D Framework > Framework Settings`
 <br><br>
 Here you can modify 
 - Scene transition style
@@ -65,10 +65,10 @@ Here you can modify
 - Scene transition speed
 - Input system asset
 
-For a quick link to the documentation use: `Window > Eren's Gamekit > Gamekit Manual`
+For a quick link to the documentation use: `Window > Eren's 2D Framework > Documentation`
 <br>
-It is recommended you join Eren's Official discord server in `Window > Eren's Gamekit > Gamekit Support Server`
-<br> In case you need any assistance in using the kit 
+It is recommended you join Eren's Official Discord server in `Window > Eren's 2D Framework > Discord`
+<br> In case you need any assistance in using the package 
 or encounter any errors or would like to suggest improvements to the framework.
 
 ## Bugs Reports and Feature Requests
