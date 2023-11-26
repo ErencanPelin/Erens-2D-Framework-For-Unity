@@ -1,4 +1,4 @@
-# Official Eren's 2D Gamekit Documentation
+# Eren's 2D Framework Documentation
 
 <ins>It is recommended you do not modify any code inside the package unless in very specific circumstances</ins>
 
