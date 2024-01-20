@@ -48,13 +48,13 @@ Before you use the package, you should set a few things up to make sure everythi
 2. On 'User Layer 6' type: "Standable"
 3. Then, on 'User Layer 7' type: "Actor"
 4. Your settings should look like this:
-   ![alt text](/Docs/tagsLayers.png)
+   ![alt text](/Resources/tagsLayers.png)
 5. Then, Go to Edit > Project Settings > Physics 2D
 6. Uncheck 'Queries Hit Triggers'
 7. [Optional] Scroll down to the 'Layer Collision Matrix' dropdown
 8. Make sure to uncheck 'Actor x Actor' collisions to stop actors (characters) from being able to push or bump into each other
 9. Your settings should look like this:
-    ![alt text](/Docs/physics2D.png)
+    ![alt text](/Resources/physics2D.png)
 
 ### Framework Settings
 To modify the global settings for the package you should go to: `Window > Eren's 2D Framework > Framework Settings`
