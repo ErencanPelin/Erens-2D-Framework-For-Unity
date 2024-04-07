@@ -1,15 +1,17 @@
 # Eren's 2D Framework Documentation
 
-<ins>It is recommended you do not modify any code inside the package unless in very specific circumstances</ins>
-
-The package was designed to only expose the code & features which should be edited. Changing anything else may cause unexpected behaviours and stop the package from working properly.
-
 Basic setup documentation can be found below, refer to the following links for more detailed documentation.
  - Third party License info can be found in [Third Party Notices](Third%20Party%20Notices.md)
  - Recent changes can be viewed in the [Change Log](CHANGELOG.md).
  - For support, please contact <u>[erenp.business@gmail.com](https://erenp.business@gmail.com)</u>
 <br><br>
 
+> [!CAUTION]
+> It is recommended you do not modify any code inside the package except in very specific circumstances. The package was designed to only expose the code & features which should be edited.
+>
+> Changing anything else may cause unexpected behaviours and stop the package from working properly.
+
+> [!tip]
 >### What's inside?
 >- This package contains ready-made assets & over 50 script components 
 which you can easily drag & drop onto GameObjects. Every component has been set up to
@@ -20,6 +22,8 @@ to make your development process even more streamlined.
 <br><br>
 >- Custom toolbars & menus have been written to allow you to simply right click and add
 template objects into your scene e.g. collectables, checkpoints & enemies.
+
+---
 
 ## Installation
 ### Package Dependencies
