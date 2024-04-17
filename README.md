@@ -13,7 +13,7 @@ Basic setup documentation can be found below, refer to the following links for m
 
 > [!tip]
 >### What's inside?
->- This package contains ready-made assets & over 50 script components 
+>- This package contains ready-made assets & over 100 script components 
 which you can easily drag & drop onto GameObjects. Every component has been set up to
 automatically adjust relevant settings on the GameObject to reduce errors.
 <br><br>
