@@ -27,10 +27,10 @@ template objects into your scene e.g. collectables, checkpoints & enemies.
 
 ## Installation
 ### Package Dependencies
-The following packages are required to ensure this framework works correctly.
+The following packages are required to ensure this framework works correctly. The version of packages may vary depending on your Unity version.
 - `com.unity.2d.tilemap.extras`: "2.2.3"
 - `com.unity.2d.pixel-perfect`: "5.0.1"
-- `com.unity.2d.tilemap`: "1.0.0"
+- `com.unity.2d.tilemap`: "1.0.0^"
 - `com.unity.2d.sprite`: "1.0.0"
 - `com.unity.inputsystem`: "1.3.0"
 - `com.unity.textmeshpro`: "3.0.6"
