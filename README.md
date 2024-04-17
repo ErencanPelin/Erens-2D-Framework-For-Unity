@@ -45,10 +45,10 @@ The following packages are required to ensure this framework works correctly. Th
 - `com.unity.textmeshpro`: "3.0.6"
 - `com.unity.nuget.newtonsoft-json`: "3.0.2"
 - `com.unity.mathematics`: "1.2.6"
-- "nuget.castle-core": "1.0.1"
-- "com.unity.ext.nunit":"1.0.6"
-- "nuget.moq":"1.0.0"
-- "com.unity.test-framework":"1.1.33"
+- `nuget.castle-core`: "1.0.1"
+- `com.unity.ext.nunit`:"1.0.6"
+- `nuget.moq`:"1.0.0"
+- `com.unity.test-framework`:"1.1.33"
 
 ---
 
