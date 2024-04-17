@@ -6,6 +6,127 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <br>
 <!-- in order of newest -> oldest changes -->
 
+## [5.0.3] - 2024-04-17
+### Changed
+- Interfaces now belong in their respective namespaces
+
+## [5.0.2] - 2024-04-03
+### Added
+- ActionInteractObject classes (like switches, buttons and other interactables) now have optional 'hint text' to show on screen the key bind required to interact with that GameObject. Hint text has customisable properties like color using rich text, and prefixes.
+### Removed
+- You can no longer set individual interaction input keys for different interactable objects. This feature was introduced in the last update, but has been removed as it impedes the consistency of games, slows down development and makes it difficult to maintain control of different inputs, bindings, actions and devices within custom code.
+
+## [5.0.1] - 2024-03-29
+### Added
+- Much more documentation to the code!
+- More runtime unit tests to validate behaviour
+- Buttons now work as expected where they stay on until all players standing on the button walk off it
+- You can now set individual interaction input keys for different interactable objects
+- Split screen demo scene
+- ShooterDemo scene to Samples folder
+- Extension method to Camera component for getting the in-game position of the mouse - returns the aiming direction when a gamepad is plugged in
+### Changed
+- Interactable system has been rewritten to optimise it and also clean up the code. Everything now inherits from InterativeObject to keep things consistent and simple
+### Fixed
+- AI combat wasn't working as it should, now both melee AI and shooter AI should be functioning properly
+- Non hold-to-attack combat player would be constantly attacking, should be fixed!
+- Some prefabs and sample scenes had broken components after the 5.0.0 update - these should be corrected now
+- Removed old development debug messages
+- Issue where powered objects weren't updating their state at the start of the game
+- Cleaned up imports in Editor assembly
+- OnCriticalHit event wasn't being displayed in the Combat Inspector window
+- Topdown demo scene player wasn't configured with playerInput
+- Systems Prefab was still referencing the PlayerInput component even though it was unused
+- Shooter demo had enemy and player objects disabled, probably left over from development, should be fixed now!
+- Attack issue where player was constantly attacking even if they weren't clicking
+- Controller shooter and aiming behaviour now works as expected
+- Broken namespaces in Tests folder
+- Some unit test names - for consistency
+### Removed
+- Inputs class removed entirely!
+
+## [5.0.0] - 2024-03-20
+### Added
+- Unit testing for Actor respawning logic
+- Input System overhauled, Framework now supports local Co-op games!
+- Workflows for automated tests on package repo
+- Unity NUnit Testing automated workflow action to build and run unit tests for this project
+- State machines (currently no custom editor for state machines)
+- Extra unit test to item database to verify caching functionality
+### Fixed
+- More descriptive errors being thrown when components aren't setup correctly
+- Demo scenes causing errors to appear in console windows
+- Sample scene moving platform was causing errors
+- Singleton Implementation
+- Inputs class was not unsubscribing from all events when disabled - should now be fixed
+### Changed
+- New CheckpointsListener class removes the check point and spawn/respawn logic from the Actor component to better encapsulate that behaviour
+- Split Tests assembly into Runtime and Editor Tests, there are now tests that test playmode functionality as well as editor and util functionality - This was done for QA
+### Removed
+- CameraZoom class, not used and not necessary :)
+- Cleaned up unused imports
+- Inputs class marked as Obsolete, will be removed in this major update
+- Gamekit/Framework Settings no longer references a global input actions field, unnecessary as a later version of the InputSystem package already does this now
+
+## [4.0.3] - 2024-01-27
+### Changed
+- Minor consistency improvements
+
+## [4.0.2] - 2024-01-20
+### Fixed
+- Squashed a bug
+
+## [4.0.1] - 2024-01-07
+### Added
+- Container Object and custom editor to handle chests within the UnityEditor
+- Containers which are basically chest and can store items for inventory system on objects
+- InventoryManager class to handle moving items from one inventory or chest or shop to another
+- Moq dependency for unit testing
+- Front end utility to shop system via ShopObject class
+- Set/Add/Remove money functions to shop to simplify money management
+- inventoryObject and shopObject to create Component menu
+### Fixed
+- Component menu "Eren Kit" renamed to "2D Framework"
+- Custom editor for shop objects, and custom editor for inventory objects
+- Dependency Injection for Inventories
+- Removed unused imports
+- Removed unused commented out code - why was this pushed to prod!!
+- ItemDatabase being wiped whenever unity rebuilds assemblies - due to the database object not being saved/being marked as dirty
+- Missing custom editor for InventoryObject
+- issue where inventories on inventory objects were not initialised resulting in potential null references
+### Changed
+- PS_Button and PS_Switch renamed to SwitchPowerSupply and ButtonPowerSupply respectively, so that it makes more sense
+- PowerSupply renamed to PowerSupplyObject
+- Powered renamed to PoweredObject - so that its more obvious
+- Added ServiceLocator and changed ItemDatabase to be a service
+- Improved speed of getting GamekitSettings as it now stores the GamekitSettingsObject in cache for fast access
+- Item database no longer writes to scriptable object, instead it writes to a JSON file
+- Inventory is no longer virtual or overridable
+### Removed
+- Object pooling and pooling system
+- Save system logs from appearing in production code
+- Existing custom editor for inventoryObject - to be re-written
+
+## [4.0.0] - 2024-01-04
+### Added
+- Shop system
+- Optional item value setting for item profiles - you can now set the value for items in your game directly in their item profile settings
+### Changed
+- Added IInventory interface to consolidate all inventory functions for mocking in tests as well as to simplify the Shop system implementation. By doing this, most inventory functions have been renamed from `Add` to `AddItem` or `Remove` to `RemoveItem`
+
+## [3.1.0-1] - 2024-01-04
+### Added
+- Shop test fixture for upcoming feature
+### Changed
+- Renamed existing unit tests to fit new naming convention
+- Moved existing unit tests into respective folders to organise and follow namespace conventions
+
+## [3.1.0] - 2024-01-02
+### Added
+- Contains method to inventory to check if item exists in inventory
+- Inventory NUnit tests to ensure everything is functioning as expected within the package
+- Validator script inside Window > Eren's 2D Framework > Framework Validator to verify the project settings are correct and highlight issues that need to be addressed for the kit to work properly
+
 ## [3.0.2] - 2023-11-18
 ### Fixed
 - Everything that refers to old documentation links has been changed to refer to the new documentation
@@ -44,8 +165,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.2.1-2] - 2023-09-08
 ### Changed
-- LevelExit now works via a SceneAsset instead of scene name string. Also changed LevelExitEditor to include a button to automatically add a provided scene to the project 
-build settings
+- LevelExit now works via a SceneAsset instead of scene name string. Also changed LevelExitEditor to include a button to automatically add a provided scene to the project
+  build settings
 
 ## [2.2.1-1] - 2023-09-08
 ### Added
@@ -61,7 +182,7 @@ build settings
 - OnceOnly path type for a path that doesn't loop and destroys the object once it reaches the end
 ### Changed
 - PathType 'Round' renamed to 'loop' to make more sense
-- Paths now work via the path object. To create a path for a platform or enemy to follow, add the 
+- Paths now work via the path object. To create a path for a platform or enemy to follow, add the
 ### Removed
 - Removed references to fall damage as it wasn't working. This system will also be re-worked and implemented in a future major update
 - Temporarily removed pooling system until it is working properly. Will be rehashed and added in the next update
@@ -87,8 +208,8 @@ build settings
 
 ## [2.1.4-2] - 2023-09-02
 ### Changed
-- SaveManager saving and loading is now working with Tasks so that they run on a separate thread and don't disturb the main thread of the game. 
-Loading should be awaited so that the return saveData value can be used
+- SaveManager saving and loading is now working with Tasks so that they run on a separate thread and don't disturb the main thread of the game.
+  Loading should be awaited so that the return saveData value can be used
 
 ## [2.1.4-1] - 2023-09-02
 ### Changed
@@ -423,7 +544,7 @@ Loading should be awaited so that the return saveData value can be used
 ### Fixed
 - referencedLoopHandling exception when trying to save Vectors using the Custom Save Manager
 ### Changed
-- SaveSystem almost entirely re-written, now it is easier to understand and far more expandable. Please refer to the updated documentation on the website 
+- SaveSystem almost entirely re-written, now it is easier to understand and far more expandable. Please refer to the updated documentation on the website
 
 ## [1.1.12] - 2022-11-22
 ### Changed
@@ -496,7 +617,7 @@ Loading should be awaited so that the return saveData value can be used
 
 ## [1.1.2] - 2022-11-13
 ### Changed
-- updated [package.json](package.json) to include release date 
+- updated [package.json](package.json) to include release date
 
 ## [1.1.1] - 2022-11-13
 ### Added
@@ -705,7 +826,7 @@ Loading should be awaited so that the return saveData value can be used
 ### Added
 - majority controller support
 - shooter combat type - shooter combat not yet implemented
-### Fixed 
+### Fixed
 - left arrow/movement input not animating the character
 ### Known issues
 - directional aiming/attacking with controller not supported
@@ -764,7 +885,7 @@ Loading should be awaited so that the return saveData value can be used
 
 ## [0.5.8 - preview] - 2022-10-12
 ### Added
-- Ability to loop attacks on AI combat modules - they now attack repeatedly at set intervals. The intervals are determined by the AttackCooldown variable 
+- Ability to loop attacks on AI combat modules - they now attack repeatedly at set intervals. The intervals are determined by the AttackCooldown variable
 ### Fixed
 - Actors no longer hit themselves, and can hit multiple overlapping enemies at once
 
@@ -790,7 +911,7 @@ Loading should be awaited so that the return saveData value can be used
 ## [0.5.5 - preview] - 2022-10-10
 ### Added
 - Functionality for new Direction Module
-- Scripted documentation 
+- Scripted documentation
 ### Changed
 - Editor GUIs to be more intuitive and cleaner for UX
 - Creating Template Platformer animator controller no longer also creates a Topdown folder - and visa versa for TopDown animator controllers
@@ -818,7 +939,7 @@ Loading should be awaited so that the return saveData value can be used
 ### Added
 - [CollectableBase](Tests/Interactions/CollectableBase.cs) as a base class for all collectables
 - Ray gizmos to MovementEditor
-  - Gizmos should go into the relevant editor scripts - not within DrawGizmos - this way scripts can stay pure to functionality
+    - Gizmos should go into the relevant editor scripts - not within DrawGizmos - this way scripts can stay pure to functionality
 - [Health](Tests/Actor/Health.cs) module
 - [Direction](Tests/Actor/Direction.cs) module
 - Custom Editor for Direction module
@@ -828,7 +949,7 @@ Loading should be awaited so that the return saveData value can be used
 - Custom editors now clamp float values to avoid errors or potential miscalculations in code
 
 ## [0.5.1 - preview] - 2022-10-7
-### Added 
+### Added
 - [Combat.cs](Tests/Actor/Combat.cs), [Actor.cs](Tests/Actor/Actor.cs), [Movement.cs](Tests/Actor/Movement.cs) Modules under 'Tests' assembly.
 - Relevant custom inspector files location in the [Editor](Editor) folder
 - [RaySettings](Tests/Actor/RaySettings.cs) struct to hold all editor -related ray settings
@@ -838,14 +959,14 @@ Loading should be awaited so that the return saveData value can be used
 ### Removed
 - [LICENSE.md](LICENSE.md) - unity asset store doesn't like licenses!
 ### Deprecated
-- 'Runtime' assembly will become redundant once all functionality has been passed to 'Tests' assembly. Tests will override and 
-in the future [0.6.0] version update. This will be a massive shift in systems & modules. Previous versions **will not work**
+- 'Runtime' assembly will become redundant once all functionality has been passed to 'Tests' assembly. Tests will override and
+  in the future [0.6.0] version update. This will be a massive shift in systems & modules. Previous versions **will not work**
 
 ## [0.5.0 - preview] - 2022-10-7
 ### Added
 - /Tests/com.Eren.2DGamekitComplete.Tests to re-do some of the core features of the gamekit in future versions to make it more understandable and straightforward - especially for newer developers.
-  - Code should be more expandable, yet also compact so that newer developers can simply drag and drop components/assign events
-  - /Tests will test features to be more simple and expandable, rather than as modular as they have been so far
+    - Code should be more expandable, yet also compact so that newer developers can simply drag and drop components/assign events
+    - /Tests will test features to be more simple and expandable, rather than as modular as they have been so far
 - Aim Mouse X (only) module
 - Filled in more documentation in [README.md](README.md)
 - Shooter combat components to fire bullets with particle systems & detect hits via particle Collisions
@@ -863,7 +984,7 @@ in the future [0.6.0] version update. This will be a massive shift in systems & 
 ## [0.4.2 - preview] - 2022-08-10
 ### Added
 - Camera zoom component which can handle zooming on both orthographic & perspective projection type cameras
-Zooms into the scene/player using the scrollwheel, input can be configured via the input actions asset
+  Zooms into the scene/player using the scrollwheel, input can be configured via the input actions asset
 - Ranged combat on click - to handle shooter-type combat
 - Scene transitions (currently no ability to customise transition) & Level loader component
 - Knockback force, enemies / player can now be knocked back upon being hit
@@ -876,7 +997,7 @@ Zooms into the scene/player using the scrollwheel, input can be configured via t
 - Effects/Particle effects. Particles should now be added as children of the gameobjects they spawn under, and then played only when necessary (Saves performance - caching)
 ### Known Issues
 - Level transitions still not fully implemented
-- Enemy actors can hit each other 
+- Enemy actors can hit each other
 
 ## [0.4.1 - preview] - 2022-08-06
 ### Added
@@ -888,8 +1009,8 @@ Zooms into the scene/player using the scrollwheel, input can be configured via t
 - Fixed formatting in Third party notices.md
 - Removed '(Component Type)' for each Actor module to clean the inspector up a little
 - Organised 'Add Component' hierarchy for actor modules to clean up the component menu
-- DirectionVelocity component no longer requires a motion component. 
-This is to allow the motion to be easily changed among gameObjects without error windows popping up
+- DirectionVelocity component no longer requires a motion component.
+  This is to allow the motion to be easily changed among gameObjects without error windows popping up
 ### Fixed
 - Teleporting now fully functional
 - LevelTileBase objects' collider not automatically being set to isTrigger
@@ -920,7 +1041,7 @@ This is to allow the motion to be easily changed among gameObjects without error
 - doubleJump yVelocity "incompatible type" error for PF_Actor animator
 - Material not found (pink mat) issues when package is imported into a non-URP project
 - Formatting in Changelog for readability (recent version headings had incorrect formatting)
-- Top down character animator 
+- Top down character animator
 - multi-gameObject characters not flipping properly with Direction Modules
 ### Removed
 - /Documentation folder (wasn't being used, completely useless, documentation now in README.md) - online documentation in the form of videos will be coming soon
