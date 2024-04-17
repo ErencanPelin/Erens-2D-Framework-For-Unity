@@ -4,6 +4,7 @@ Basic setup documentation can be found below, refer to the following links for m
  - Third party License info can be found in [Third Party Notices](Third%20Party%20Notices.md)
  - Recent changes can be viewed in the [Change Log](CHANGELOG.md).
  - For support, please contact <u>[erenp.business@gmail.com](https://erenp.business@gmail.com)</u>
+ - Join Eren's Discord Server for latest changes, or logging an issue! [Discord Server](https://discord.com/invite/K4fQ6s82Q4)
 <br><br>
 
 > [!CAUTION]
@@ -27,6 +28,14 @@ template objects into your scene e.g. collectables, checkpoints & enemies.
 
 ## Installation
 ### Package Dependencies
+> [!TIP]
+> To install:
+> 1. Go to Window > Package Manager
+> 2. Press the `+` button and select 'Add Package by Name'
+> 3. Enter the package name as shown above
+> 4. Enter the package version as shown above
+> 5. Press Add (may take a few minutes)
+
 The following packages are required to ensure this framework works correctly. The version of packages may vary depending on your Unity version.
 - `com.unity.2d.tilemap.extras`: "2.2.3"
 - `com.unity.2d.pixel-perfect`: "5.0.1"
@@ -41,13 +50,7 @@ The following packages are required to ensure this framework works correctly. Th
 - "nuget.moq":"1.0.0"
 - "com.unity.test-framework":"1.1.33"
 
-To install:
-1. Go to Window > Package Manager
-2. Press the `+` button and select 'Add Package by Name'
-3. Enter the package name as shown above
-4. Enter the package version as shown above
-5. Press Add (may take a few minutes)
-<br>
+---
 
 ## Setup and Configuration
 
@@ -78,6 +81,8 @@ For a quick link to the documentation use: `Window > Eren's 2D Framework > Docum
 It is recommended you join Eren's Official Discord server in `Window > Eren's 2D Framework > Discord`
 <br> In case you need any assistance in using the package 
 or encounter any errors or would like to suggest improvements to the framework.
+
+---
 
 ## Bugs Reports and Feature Requests
 
