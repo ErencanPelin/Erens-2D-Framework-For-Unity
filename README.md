@@ -37,18 +37,59 @@ template objects into your scene e.g. collectables, checkpoints & enemies.
 > 5. Press Add (may take a few minutes)
 
 The following packages are required to ensure this framework works correctly. The version of packages may vary depending on your Unity version.
-- `com.unity.2d.tilemap.extras`: "2.2.3"
-- `com.unity.2d.pixel-perfect`: "5.0.1"
-- `com.unity.2d.tilemap`: "1.0.0^"
-- `com.unity.2d.sprite`: "1.0.0"
-- `com.unity.inputsystem`: "1.3.0"
-- `com.unity.textmeshpro`: "3.0.6"
-- `com.unity.nuget.newtonsoft-json`: "3.0.2"
-- `com.unity.mathematics`: "1.2.6"
-- `nuget.castle-core`: "1.0.1"
-- `com.unity.ext.nunit`:"1.0.6"
-- `nuget.moq`:"1.0.0"
-- `com.unity.test-framework`:"1.1.33"
+| Package Name | Version |
+|------|---------|
+`com.unity.2d.tilemap.extras` | `2.2.3` |
+| `com.unity.2d.pixel-perfect` | `5.0.1` | 
+| `com.unity.2d.tilemap` | `1.0.0` | 
+| `com.unity.2d.sprite` | `1.0.0` | 
+| `com.unity.inputsystem` | `1.3.0` |
+| `com.unity.textmeshpro` | `3.0.6` |
+| `com.unity.nuget.newtonsoft-json` | `3.0.2`|
+| `com.unity.mathematics` | `1.2.6` |
+| `nuget.castle-core` | `1.0.1` |
+| `com.unity.ext.nunit` | `1.0.6` |
+| `nuget.moq` | `1.0.0` |
+| `com.unity.test-framework` | `1.1.33` |
+
+### Modify `Packages/manifest.json` 
+> [!NOTE]
+> - Because we want to create runtime tests, we need to make sure we can access our Input System from our tests. This is so we can simulate user input like Keyboard, Mouse or Gamepad from our tests to ensure our characters or UI behave properly
+
+1. Navigate to your Unity Project's root folder, either via Windows Explorer or otherwise. You can also right click in your project window and select `Show in explorer`.
+2. From the root folder, go to `/Packages`
+3. Right click on `manifest.json` and select `Open with Notepad` (or your code editor of choice)
+4. You should see the following contents (or similar)
+```
+{
+  "dependencies": {
+    "com.unity.ai.navigation": "1.1.1",
+    "com.unity.feature.2d": "1.0.0",
+    ...
+  }
+}
+```
+5. Append, the following chunk to your json so that it looks like this:
+6. SAVE the file, close it, and return to Unity
+```
+{
+  "dependencies": {
+    "com.unity.ai.navigation": "1.1.1",
+    "com.unity.feature.2d": "1.0.0",
+    ...
+  },
+  "testables": [
+    "com.unity.inputsystem"
+  ]
+}
+```
+> [!WARNING]
+> 1. Make sure you have used the quotation marks "" in the correct places
+> 2. Make sure you have used SQUARE BRACKETS
+> 3. Make sure you have spelt the package name correctly
+> 4. make sure you include the COMMA , after the closing curly brace of dependencies
+> - When you go back into Unity, Unity will rebuild your packages. Should anything go wrong, go back to step 16. and ensure you have done everything correctly
+
 
 ---
 
