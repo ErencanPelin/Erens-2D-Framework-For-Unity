@@ -88,7 +88,7 @@ The following packages are required to ensure this framework works correctly. Th
 > 2. Make sure you have used SQUARE BRACKETS
 > 3. Make sure you have spelt the package name correctly
 > 4. make sure you include the COMMA , after the closing curly brace of dependencies
-> - When you go back into Unity, Unity will rebuild your packages. Should anything go wrong, go back to step 16. and ensure you have done everything correctly
+> - When you go back into Unity, Unity will rebuild your packages. Should anything go wrong, go back to step 3. and ensure you have done everything correctly
 
 
 ---
