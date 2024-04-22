@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <br>
 <!-- in order of newest -> oldest changes -->
 
+## [5.0.4] - 2024-04-22
+### Fixed
+- Unset default loading widget in Gamekit settings - is now set to Linear Loading bar
+- Incorrect package version number
+- Missing gamekit settings null reference appearing when loading Gamekit Settings window. This should be fixed! Settings should work as normal
+- Missing material (pink material) on Top down tile pallet due to unset default material. This should be working as expected now
+
 ## [5.0.3] - 2024-04-17
 ### Changed
 - Interfaces now belong in their respective namespaces
