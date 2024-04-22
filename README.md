@@ -115,7 +115,6 @@ Here you can modify
 - Scene transition style
 - Scene transition color
 - Scene transition speed
-- Input system asset
 
 For a quick link to the documentation use: `Window > Eren's 2D Framework > Documentation`
 <br>
