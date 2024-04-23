@@ -1,4 +1,4 @@
-# ShopManage
+# ShopManager
 > namespace Gamekit2D.Runtime.Shops
 ```csharp
 public static class ShopManager
