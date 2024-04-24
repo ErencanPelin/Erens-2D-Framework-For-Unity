@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <br>
 <!-- in order of newest -> oldest changes -->
 
+## [5.0.6] - 2024-04-25
+### Fixed
+- Build errors associated with the Combat component
+
 ## [5.0.5] - 2024-04-24
 ### Changed
 - Item creation in the Create asset menu now displays at the top of the list to make it easier to find.
